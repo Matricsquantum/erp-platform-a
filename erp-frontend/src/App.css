@@ -1,38 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900&display=swap');
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: 'Manrope', 'Noto Sans', sans-serif;
+  color: #111418;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1980e6; /* Figma primary blue */
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+  background-color: #ffffff; /* Figma white background */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sidebar {
+  width: 300px;
+  background: #ffffff; /* White sidebar background */
+  padding: 20px;
+  border-right: 1px solid #dce0e5; /* Figma border gray */
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-item {
+  padding: 10px;
+  border-radius: 8px;
+  background: #f0f2f4; /* Figma light gray highlight */
+  cursor: pointer;
+  color: #111418;
+}
+
+.nav-item.active {
+  background: #1980e6; /* Figma active blue */
+  color: white;
+}
+
+.new-transaction {
+  width: 100%;
+  padding: 10px;
+  background: #1980e6; /* Figma button blue */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.new-transaction:hover {
+  background: #1464b3; /* Darker blue for hover */
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #111418;
+}
+
+.business-item, .balance-item, .transaction-item {
+  padding: 10px;
+  background: #ffffff; /* White background */
+  border: 1px solid #dce0e5; /* Figma border gray */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: #111418;
+}
+
+.balance-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: #ffffff; /* White main content */
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #111418;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #dce0e5; /* Figma border gray */
+  border-radius: 8px;
+  padding: 16px;
+  background: #ffffff; /* White card background */
+  text-align: left;
+  color: #111418;
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+  fill: #111418; /* Dark gray for icons */
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.panel {
+  background: #f5f5f5; /* Light gray panel background */
+  border: 1px solid #dce0e5; /* Figma border gray */
+  border-radius: 10px;
+  padding: 15px;
+  color: #111418;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 5px;
+  border-bottom: 1px solid #e0e0e0; /* Subtle separator */
+  color: #111418;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+input, button {
+  padding: 8px;
+  border: 1px solid #1980e6; /* Figma blue border */
+  border-radius: 5px;
+  font-size: 14px;
+  color: #111418;
+}
+
+button {
+  background: #1980e6; /* Figma button blue */
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1464b3; /* Darker blue for hover */
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .sidebar {
+    width: 100%;
+  }
+  .panel {
+    width: 90%;
   }
 }
