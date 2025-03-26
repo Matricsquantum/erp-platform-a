@@ -128,7 +128,7 @@ const App: React.FC = () => {
                 <div className="panel inventory">
                   <h2>Inventory</h2>
                   <ul>
-                    {inventory.map((item, index) => (
+                    {inventory.map((item: string, index: number) => (
                       <li key={index}>{item}</li>
                     ))}
                   </ul>
@@ -150,7 +150,7 @@ const App: React.FC = () => {
                 <div className="panel orders">
                   <h2>Orders</h2>
                   <ul>
-                    {orders.map((order) => (
+                    {orders.map((order: Order) => (
                       <li key={order.id}>
                         {order.item} - Qty: {order.qty} - Status: {order.status}
                       </li>
