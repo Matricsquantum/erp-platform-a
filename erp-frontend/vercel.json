@@ -1,4 +1,14 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-    "builds": [{ "src": "package.json", "use": "@vercel/static" }]
-  }
+  "builds": [
+    {
+      "src": "build/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
